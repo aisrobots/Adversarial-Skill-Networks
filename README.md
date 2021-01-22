@@ -1,4 +1,8 @@
 # Adversarial Skill Networks: Unsupervised Robot Skill Learning from Video
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/mees/Adversarial-Skill-Networks.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mees/Adversarial-Skill-Networks/context:python)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/mees/Adversarial-Skill-Networks.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/mees/Adversarial-Skill-Networks/alerts/)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 This repository is a PyTorch implementation of Adversarial Skill Networks (ASN), an approach for unsupervised skill learning from video. Concretely, our approach learns a task-agnostic skill embedding space from unlabeled multiview videos. We combine a metric learning loss, which utilizes temporal video coherence to learn a state representation, with an entropy regularized adversarial skill-transfer loss. The learned embedding enables training of continuous control policies to solve novel tasks that require the interpolation of previously seen skills. More information at our [project page](http://robotskills.cs.uni-freiburg.de/).
 
@@ -7,7 +11,7 @@ This repository is a PyTorch implementation of Adversarial Skill Networks (ASN),
 </p>
 
 ## Reference
-If you find the code helpful please consider citing our work 
+If you find the code helpful please consider citing our work
 ```
 @INPROCEEDINGS{mees20icra_asn,
   author = {Oier Mees and Markus Merklinger and Gabriel Kalweit and Wolfram Burgard},
@@ -57,7 +61,7 @@ Evaluate the trained ASN model on the video alignment of a novel task and visual
 python eval_asn.py --load-model pretrained_model/model_best.pth.tar  --val-dir-metric /tmp/real_combi_task3/videos/val/ --task cstack
 ```
 
-## Pretrained Model	
+## Pretrained Model
 We provide the weights, a log file and a t-SNE visualization for a pretrained model for the default setting [here](asn/pretrained_model.zip). This model achieves an alignment loss of 0.1638 on the unseen color stacking task, which is very close to the 0.165 reported on the paper.
 
 
@@ -74,7 +78,7 @@ We provide a python script to record and synchronize several webcams. First chec
 
 ```
 ls -ltrh /dev/video*
-``` 
+```
 
 Now start the recording for n webcams:
 ```
